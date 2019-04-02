@@ -1,0 +1,206 @@
+/*Font Google*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Pinyon+Script');
+
+/*Estilos del Body*/
+
+html,
+body {
+    font-size: 16px;
+    background-image: url(../img/fondo.jpg);
+    /*Estilos para usar imagenes en Body*/
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/*Espacio de titulos*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #7D7D7D;
+}
+cite{
+    font-size: 1.2rem;
+}
+
+/*Estilos de los titulos*/
+
+.title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 200;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #E06B9F;
+}
+
+.title-2 {
+    font-size: 4rem;
+    color: #E06B9F;
+    /*color: #ADDFE8;*/
+    font-family: 'Pinyon Script', cursive;
+}
+
+
+/*Estilos de los Sub-titulos*/
+
+.sub-title {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #E06B9F;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+
+/*Centrado de la imagen*/
+
+.img-center {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.img-rounded {
+    border-radius: 6%;
+}
+
+
+/*Formulario*/
+
+.formulario {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+.item-form {
+    padding: 10px 0;
+}
+
+.item-form img {
+    margin-right: 10px;
+}
+.item-form > p {
+    color: #C86AAB;
+    font-weight: bold;
+}
+
+/*Botones*/
+
+.button-send-o {
+    background: transparent !important;
+    color: #00AFF0 !important;
+    border: 1px solid #00AFF0;
+    /*Transition*/
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    -o-transition: background .2s;
+    transition: background .2s;
+}
+
+
+/*Efectos*/
+
+.button-send-o:hover {
+    background: #00AFF0 !important;
+    color: #fff !important;
+    border: 1px solid #00AFF0;
+    /*Transition*/
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    -o-transition: background .2s;
+    transition: background .2s;
+}
+
+.button-resert-o {
+    background: transparent !important;
+    color: #E06B9F;
+    border: 1px solid #E06B9F;
+    /*Transition*/
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    -o-transition: background .2s;
+    transition: background .2s;
+}
+
+.button-resert-o:hover {
+    background: #E06B9F !important;
+    color: #fff !important;
+    border: 1px solid #E06B9F;
+    /*Transition*/
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    -o-transition: background .2s;
+    transition: background .2s;
+}
+
+
+/*Efectos*/
+
+
+/*-----------------------------------------------------------------
+                            Efectos
+-----------------------------------------------------------------*/
+
+.img-zoom img {
+    /*border: 5px solid rgba(0,0,0,.1);*/
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transition-duration: 250ms;
+    -o-transition-duration: 250ms;
+    transition-duration: 250ms;
+}
+
+.img-zoom img:hover {
+    /*border: 6px solid rgba(0, 0, 0, .3);*/
+    -webkit-transform: scale(1.12, 1.12);
+    -moz-transform: scale(1.12, 1.12);
+    -o-transform: scale(1.12, 1.12);
+    transform: scale(1.12, 1.12);
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transition-duration: 250ms;
+    -o-transition-duration: 250ms;
+    transition-duration: 250ms;
+}
+
+
+/*Iconos */

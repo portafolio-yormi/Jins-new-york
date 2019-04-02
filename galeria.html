@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería | Jins New York</title>
+    <link rel="icon" href="img/logo.ico">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsee.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/responsee.js"></script>
+    <link href="dist/css/lightgallery.css" rel="stylesheet">
+    <style type="text/css">
+    .demo-gallery > ul {
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+    .demo-gallery > ul > li {
+        float: left;
+        margin-bottom: 15px;
+        margin-right: 20px;
+        width: 200px;
+    }
+
+    .demo-gallery > ul > li a {
+        border: 3px solid #FFF;
+        border-radius: 3px;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        float: left;
+    }
+
+    .demo-gallery > ul > li a > img {
+        -webkit-transition: -webkit-transform 0.15s ease 0s;
+        -moz-transition: -moz-transform 0.15s ease 0s;
+        -o-transition: -o-transform 0.15s ease 0s;
+        transition: transform 0.15s ease 0s;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        height: 100%;
+        width: 100%;
+    }
+
+    .demo-gallery > ul > li a:hover > img {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    .demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+        opacity: 1;
+    }
+
+    .demo-gallery > ul > li a .demo-gallery-poster {
+        background-color: rgba(0, 0, 0, 0.1);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        -webkit-transition: background-color 0.15s ease 0s;
+        -o-transition: background-color 0.15s ease 0s;
+        transition: background-color 0.15s ease 0s;
+    }
+
+    .demo-gallery > ul > li a .demo-gallery-poster > img {
+        left: 50%;
+        margin-left: -10px;
+        margin-top: -10px;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        -webkit-transition: opacity 0.3s ease 0s;
+        -o-transition: opacity 0.3s ease 0s;
+        transition: opacity 0.3s ease 0s;
+    }
+
+    .demo-gallery > ul > li a:hover .demo-gallery-poster {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .demo-gallery .justified-gallery > a > img {
+        -webkit-transition: -webkit-transform 0.15s ease 0s;
+        -moz-transition: -moz-transform 0.15s ease 0s;
+        -o-transition: -o-transform 0.15s ease 0s;
+        transition: transform 0.15s ease 0s;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        height: 100%;
+        width: 100%;
+    }
+
+    .demo-gallery .justified-gallery > a:hover > img {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    .demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+        opacity: 1;
+    }
+
+    .demo-gallery .justified-gallery > a .demo-gallery-poster {
+        background-color: rgba(0, 0, 0, 0.1);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        -webkit-transition: background-color 0.15s ease 0s;
+        -o-transition: background-color 0.15s ease 0s;
+        transition: background-color 0.15s ease 0s;
+    }
+
+    .demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+        left: 50%;
+        margin-left: -10px;
+        margin-top: -10px;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        -webkit-transition: opacity 0.3s ease 0s;
+        -o-transition: opacity 0.3s ease 0s;
+        transition: opacity 0.3s ease 0s;
+    }
+
+    .demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .demo-gallery .video .demo-gallery-poster img {
+        height: 48px;
+        margin-left: -24px;
+        margin-top: -24px;
+        opacity: 0.8;
+        width: 48px;
+    }
+
+    .demo-gallery.dark > ul > li a {
+        border: 3px solid #04070a;
+    }
+
+    .home .demo-gallery {
+        padding-bottom: 80px;
+    }
+    </style>
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+</head>
+
+<body class="size-960">
+    <!-- HEADER -->
+    <header>
+        <div class="line">
+            <div class="box">
+                <div class="s-12 l-4 center">
+                    <img src="img/logo.png">
+                </div>
+            </div>
+        </div>
+        <!-- TOP NAV -->
+        <div class="line">
+            <nav class="margin-bottom">
+                <p class="nav-text">Men&uacute;</p>
+                <div class="top-nav s-12 l-4 center">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="galeria.html">Galer&iacute;a</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <!-- ASIDE NAV AND CONTENT -->
+        <div class="line">
+            <div class="box margin-bottom">
+                <div class="s-12 m-12 l-12">
+                  <h1 class="text-center title">Galer&iacute;a de im&aacute;genes</h1>
+                </div>
+                <div class="margin">
+                    <div class="demo-gallery">
+                        <ul id="lightgallery" class="list-unstyled row">
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-1.jpg 375, img/thumb-1.jpg 480, img/thumb-1.jpg 800" data-src="img/1-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-1.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-2.jpg 375, img/thumb-2.jpg 480, img/thumb-2.jpg 800" data-src="img/2-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-2.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-3.jpg 375, img/thumb-3.jpg 480, img/thumb-3.jpg 800" data-src="img/3-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-3.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-4.jpg 375, img/thumb-4.jpg 480, img/thumb-4.jpg 800" data-src="img/4-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-4.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-5.jpg 375, img/thumb-5.jpg 480, img/thumb-5.jpg 800" data-src="img/5-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-5.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-6.jpg 375, img/thumb-6.jpg 480, img/thumb-6.jpg 800" data-src="img/6-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-6.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-7.jpg 375, img/thumb-7.jpg 480, img/thumb-7.jpg 800" data-src="img/7-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-7.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-8.jpg 375, img/thumb-8.jpg 480, img/thumb-8.jpg 800" data-src="img/8-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-8.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-9.jpg 375, img/thumb-9.jpg 480, img/thumb-9.jpg 800" data-src="img/9-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-9.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-10.jpg 375, img/thumb-10.jpg 480, img/thumb-10.jpg 800" data-src="img/10-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-10.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-11.jpg 375, img/thumb-11.jpg 480, img/thumb-11.jpg 800" data-src="img/11-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-11.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-12.jpg 375, img/thumb-12.jpg 480, img/thumb-12.jpg 800" data-src="img/12-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-12.jpg">
+                                </a>
+                            </li>
+
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-13.jpg 375, img/thumb-13.jpg 480, img/thumb-13.jpg 800" data-src="img/13-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-13.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-14.jpg 375, img/thumb-14.jpg 480, img/thumb-14.jpg 800" data-src="img/14-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-14.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-15.jpg 375, img/thumb-15.jpg 480, img/thumb-15.jpg 800" data-src="img/15-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-15.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-16.jpg 375, img/thumb-16.jpg 480, img/thumb-16.jpg 800" data-src="img/16-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-16.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-17.jpg 375, img/thumb-17.jpg 480, img/thumb-17.jpg 800" data-src="img/17-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-17.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-18.jpg 375, img/thumb-18.jpg 480, img/thumb-18.jpg 800" data-src="img/18-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-18.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-19.jpg 375, img/thumb-19.jpg 480, img/thumb-19.jpg 800" data-src="img/19-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-19.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-20.jpg 375, img/thumb-20.jpg 480, img/thumb-20.jpg 800" data-src="img/20-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-20.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-21.jpg 375, img/thumb-21.jpg 480, img/thumb-21.jpg 800" data-src="img/21-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-21.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-22.jpg 375, img/thumb-22.jpg 480, img/thumb-22.jpg 800" data-src="img/22-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-22.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-23.jpg 375, img/thumb-23.jpg 480, img/thumb-23.jpg 800" data-src="img/23-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-23.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-24.jpg 375, img/thumb-24.jpg 480, img/thumb-24.jpg 800" data-src="img/24-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-24.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-25.jpg 375, img/thumb-25.jpg 480, img/thumb-25.jpg 800" data-src="img/25-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-25.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-26.jpg 375, img/thumb-26.jpg 480, img/thumb-26.jpg 800" data-src="img/26-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-26.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-27.jpg 375, img/thumb-27.jpg 480, img/thumb-27.jpg 800" data-src="img/27-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-27.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-28.jpg 375, img/thumb-28.jpg 480, img/thumb-28.jpg 800" data-src="img/28-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-28.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-29.jpg 375, img/thumb-29.jpg 480, img/thumb-29.jpg 800" data-src="img/29-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-29.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-30.jpg 375, img/thumb-30.jpg 480, img/thumb-30.jpg 800" data-src="img/30-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-30.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-31.jpg 375, img/thumb-31.jpg 480, img/thumb-31.jpg 800" data-src="img/31-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-31.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-32.jpg 375, img/thumb-32.jpg 480, img/thumb-32.jpg 800" data-src="img/32-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-32.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-33.jpg 375, img/thumb-33.jpg 480, img/thumb-33.jpg 800" data-src="img/33-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-33.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-34.jpg 375, img/thumb-34.jpg 480, img/thumb-34.jpg 800" data-src="img/34-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-34.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-35.jpg 375, img/thumb-35.jpg 480, img/thumb-35.jpg 800" data-src="img/35-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-35.jpg">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-36.jpg 375, img/thumb-36.jpg 480, img/thumb-36.jpg 800" data-src="img/36-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-36.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-37.jpg 375, img/thumb-37.jpg 480, img/thumb-37.jpg 800" data-src="img/37-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-37.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-38.jpg 375, img/thumb-38.jpg 480, img/thumb-38.jpg 800" data-src="img/38-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-38.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-39.jpg 375, img/thumb-39.jpg 480, img/thumb-39.jpg 800" data-src="img/39-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-39.jpg">
+                                </a>
+                            </li>
+
+                             <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/thumb-40.jpg 375, img/thumb-40.jpg 480, img/thumb-40.jpg 800" data-src="img/40-1600.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/thumb-40.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="line">
+        <div class="box">
+            <div class="s-12 l-6">
+               <p>Copyright <smal id="fecha"></smal>, Derechos reservados</p>
+            </div>
+            <div class="s-12 l-6">
+                <a class="right" href="http://www.clicnovo.com" title="ClicNovo Google Partner">Design by <strong>ClicNovo</strong></a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#lightgallery').lightGallery();
+
+        var ano = (new Date).getFullYear();
+        $("#fecha").text(ano);
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+    <script src="dist/js/lightgallery.js"></script>
+    <script src="dist/js/lg-fullscreen.js"></script>
+    <script src="dist/js/lg-thumbnail.js"></script>
+    <script src="dist/js/lg-video.js"></script>
+    <script src="dist/js/lg-autoplay.js"></script>
+    <script src="dist/js/lg-zoom.js"></script>
+    <script src="dist/js/lg-hash.js"></script>
+    <script src="dist/js/lg-pager.js"></script>
+    <script src="lib/jquery.mousewheel.min.js"></script>
+    </script>
+</body>
+
+</html>
